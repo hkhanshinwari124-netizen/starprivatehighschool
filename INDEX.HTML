@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Star Private High School, Landikotal</title>
+  <meta name="description" content="Star Private High School, Landikotal, Khyber, Pakistan. Quality education, leadership and student development.">
+
+  <!-- School Logo / Favicon -->
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+
+  <style>
+    /* =========================
+       GLOBAL
+    ========================= */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #172033;
+      background: #f7f9fc;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 40px;
+      color: #102a56;
+      margin-bottom: 10px;
+    }
+
+    .section-title p {
+      color: #667085;
+      max-width: 650px;
+      margin: auto;
+    }
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      box-shadow: 0 3px 20px rgba(0,0,0,0.08);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: bold;
+      color: #102a56;
+    }
+
+    .brand img {
+      width: 54px;
+      height: 54px;
+      object-fit: contain;
+      border-radius: 50%;
+    }
+
+    .brand-text {
+      font-size: 15px;
+      line-height: 1.2;
+    }
+
+    .brand-text span {
+      display: block;
+      color: #c62828;
+      font-size: 12px;
+      margin-top: 3px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 14px;
+      font-weight: 600;
+      color: #26354d;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #c62828;
+    }
+
+    .facebook-btn {
+      background: #1877f2;
+      color: white !important;
+      padding: 10px 15px;
+      border-radius: 25px;
+    }
+
+    .facebook-btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.9;
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 28px;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+
+    /* =========================
+       HERO
+    ========================= */
+
+    .hero {
+      min-height: 100vh;
+      padding-top: 78px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(120deg, rgba(10,35,75,0.94), rgba(15,65,120,0.82)),
+        url("images/school-event.jpg") center/cover no-repeat;
+    }
+
+    .hero-content {
+      color: white;
+      max-width: 760px;
+      padding: 80px 0;
+    }
+
+    .hero-logo {
+      width: 105px;
+      height: 105px;
+      object-fit: contain;
+      margin-bottom: 25px;
+      border-radius: 50%;
+      background: white;
+      padding: 5px;
+      animation: floatLogo 3s ease-in-out infinite;
+    }
+
+    @keyframes floatLogo {
+      0%,100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 22px;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: #ffcc33;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 650px;
+      margin-bottom: 32px;
+      color: #edf4ff;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: 0.3s;
+      border: 2px solid transparent;
+    }
+
+    .btn-primary {
+      background: #c62828;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      background: #a91e1e;
+    }
+
+    .btn-light {
+      background: white;
+      color: #102a56;
+    }
+
+    .btn-light:hover {
+      transform: translateY(-3px);
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(16,42,86,0.15);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 450px;
+      object-fit: cover;
+    }
+
+    .about-text h2 {
+      font-size: 42px;
+      color: #102a56;
+      margin-bottom: 20px;
+    }
+
+    .about-text p {
+      color: #667085;
+      margin-bottom: 18px;
+    }
+
+    .check-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .check-list li {
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .check-list li::before {
+      content: "✓";
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      background: #102a56;
+      color: white;
+      margin-right: 10px;
+    }
+
+    /* =========================
+       FEATURES
+    ========================= */
+
+    .features {
+      background: #f1f5fb;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      background: white;
+      padding: 30px 22px;
+      border-radius: 18px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      transition: 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .feature-icon {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+      color: #102a56;
+      margin-bottom: 8px;
+    }
+
+    .feature-card p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* =========================
+       LEADERSHIP
+    ========================= */
+
+    .leadership {
+      background: white;
+    }
+
+    .leadership-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 280px);
+      justify-content: center;
+      gap: 35px;
+    }
+
+    .leader-card {
+      background: white;
+      border-radius: 22px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.10);
+      transition: 0.35s;
+      border: 1px solid #edf0f5;
+    }
+
+    .leader-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 25px 55px rgba(0,0,0,0.15);
+    }
+
+    .leader-photo {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .leader-info {
+      padding: 22px;
+    }
+
+    .leader-info h3 {
+      color: #102a56;
+      font-size: 23px;
+      margin-bottom: 5px;
+    }
+
+    .leader-info p {
+      color: #c62828;
+      font-weight: bold;
+    }
+
+    /* =========================
+       PRINCIPAL MESSAGE
+    ========================= */
+
+    .message {
+      background: linear-gradient(135deg, #102a56, #174c88);
+      color: white;
+    }
+
+    .message-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .message-text h2 {
+      font-size: 42px;
+      margin-bottom: 20px;
+    }
+
+    .message-text p {
+      color: #e5edfa;
+      margin-bottom: 18px;
+    }
+
+    .message-video {
+      background: #07182f;
+      border-radius: 22px;
+      min-height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .message-video video {
+      width: 100%;
+      height: 100%;
+      max-height: 420px;
+      object-fit: cover;
+    }
+
+    .video-placeholder {
+      text-align: center;
+      padding: 40px;
+      color: #dbe7f7;
+    }
+
+    .video-placeholder .play {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    /* =========================
+       GALLERY
+    ========================= */
+
+    .gallery {
+      background: #f7f9fc;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery-item {
+      height: 250px;
+      overflow: hidden;
+      border-radius: 18px;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.5s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.08);
+    }
+
+    /* =========================
+       NEWS
+    ========================= */
+
+    .news {
+      background: white;
+    }
+
+    .news-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .news-card {
+      border-radius: 18px;
+      overflow: hidden;
+      background: white;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.07);
+      border: 1px solid #edf0f5;
+    }
+
+    .news-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    .news-content {
+      padding: 23px;
+    }
+
+    .news-date {
+      color: #c62828;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    .news-content h3 {
+      color: #102a56;
+      margin: 8px 0;
+    }
+
+    .news-content p {
+      color: #667085;
+      font-size: 14px;
+    }
+
+    /* =========================
+       ADMISSION
+    ========================= */
+
+    .admission {
+      background: #f1f5fb;
+    }
+
+    .admission-box {
+      max-width: 850px;
+      margin: auto;
+      background: white;
+      padding: 45px;
+      border-radius: 25px;
+      box-shadow: 0 15px 45px rgba(0,0,0,0.08);
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .form-group {
+      margin-bottom: 5px;
+    }
+
+    .form-group.full {
+      grid-column: 1 / -1;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: bold;
+      color: #27364d;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 13px 15px;
+      border: 1px solid #d8dee8;
+      border-radius: 10px;
+      outline: none;
+      font-family: inherit;
+      font-size: 15px;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: #102a56;
+    }
+
+    .form-group textarea {
+      height: 130px;
+      resize: vertical;
+    }
+
+    .form-submit {
+      margin-top: 20px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .contact-card {
+      padding: 35px;
+      border-radius: 20px;
+      background: #f7f9fc;
+    }
+
+    .contact-card h3 {
+      color: #102a56;
+      margin-bottom: 20px;
+      font-size: 28px;
+    }
+
+    .contact-item {
+      margin-bottom: 18px;
+      color: #566276;
+    }
+
+    .contact-item strong {
+      color: #102a56;
+      display: block;
+    }
+
+    .contact-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .map-box {
+      min-height: 350px;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #e9eef5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+      background: #081a35;
+      color: white;
+      padding: 60px 0 25px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 45px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand img {
+      width: 70px;
+      height: 70px;
+      object-fit: contain;
+      background: white;
+      border-radius: 50%;
+    }
+
+    footer h3 {
+      margin-bottom: 15px;
+    }
+
+    footer p {
+      color: #b9c7dc;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 9px;
+    }
+
+    .footer-links a {
+      color: #b9c7dc;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: white;
+    }
+
+    .copyright {
+      border-top: 1px solid rgba(255,255,255,0.12);
+      padding-top: 20px;
+      text-align: center;
+      color: #9dafc7;
+      font-size: 13px;
+    }
+
+    /* =========================
+       BACK TO TOP
+    ========================= */
+
+    .top-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: #c62828;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+    }
+
+    .top-btn.show {
+      display: block;
+    }
+
+    /* =========================
+       RESPONSIVE
+    ========================= */
+
+    @media (max-width: 950px) {
+
+      .nav-links {
+        position: absolute;
+        top: 78px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 25px;
+        display: none;
+        box-shadow: 0 15px 25px rgba(0,0,0,0.08);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .about-grid,
+      .message-box,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .news-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 650px) {
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .section-title h2 {
+        font-size: 31px;
+      }
+
+      .brand-text {
+        font-size: 12px;
+      }
+
+      .brand-text span {
+        font-size: 10px;
+      }
+
+      .brand img {
+        width: 45px;
+        height: 45px;
+      }
+
+      .hero {
+        text-align: center;
+      }
+
+      .hero-content {
+        padding: 60px 0;
+      }
+
+      .hero-logo {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .feature-grid,
+      .gallery-grid,
+      .news-grid,
+      .form-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .leadership-grid {
+        grid-template-columns: 1fr;
+        max-width: 320px;
+        margin: auto;
+      }
+
+      .about-image img {
+        height: 300px;
+      }
+
+      .admission-box {
+        padding: 25px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header>
+    <div class="container navbar">
+
+      <a href="#home" class="brand">
+        <img src="images/logo.jpg" alt="Star Private High School Logo">
+
+        <div class="brand-text">
+          STAR PRIVATE HIGH SCHOOL
+          <span>LANDIKOTAL</span>
+        </div>
+      </a>
+
+      <button class="menu-btn" id="menuBtn">☰</button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#admission">Admissions</a></li>
+        <li><a href="#contact">Contact</a></li>
+
+        <li>
+          <a
+            href="https://www.facebook.com/p/Star-private-high-school-landikotal-100076145951409/"
+            tar
+            ="_blank"
+            class="facebook-btn">
+            📘 Facebook
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </header>
+
+
+  <!-- =========================
+       HERO
+  ========================== -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <img
+          src="images/logo.jpg"
+          alt="Star Private High School Logo"
+          class="hero-logo">
+
+        <h1>
+          STAR PRIVATE<br>
+          <span>HIGH SCHOOL</span>
+        </h1>
+
+        <p>
+          Landikotal, Khyber, Pakistan
+          <br>
+          Building Bright Minds, Inspiring Future Leaders.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#admission" class="btn btn-primary">
+            Apply for Admission
+          </a>
+
+          <a href="#about" class="btn btn-light">
+            Explore Our School
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ABOUT
+  ========================== -->
+
+  <section class="section about" id="about">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>About Our School</h2>
+        <p>
+          Welcome to Star Private High School, Landikotal.
+        </p>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="about-image">
+          <img
+            src="images/school-event.jpg"
+            alt="Star Private High School">
+        </div>
+
+        <div class="about-text">
+
+          <h2>Education With Purpose</h2>
+
+          <p>
+            Star Private High School, Landikotal is dedicated to
+            providing students with a strong educational foundation
+            and opportunities for personal development.
+          </p>
+
+          <p>
+            Our focus is on learning, discipline, character building
+            and helping students prepare for their future.
+          </p>
+
+          <ul class="check-list">
+            <li>Quality Education</li>
+            <li>Student Development</li>
+            <li>Character Building</li>
+            <li>Strong Leadership</li>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FEATURES
+  ========================== -->
+
+  <section class="section features">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Why Choose Our School?</h2>
+        <p>
+          A learning environment focused on students and their future.
+        </p>
+      </div>
+
+      <div class="feature-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">📚</div>
+          <h3>Quality Learning</h3>
+          <p>
+            Focus on meaningful learning and academic development.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎓</div>
+          <h3>Student Growth</h3>
+          <p>
+            Supporting students in their educational journey.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⭐</div>
+          <h3>Character Building</h3>
+          <p>
+            Encouraging responsibility, discipline and confidence.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏫</div>
+          <h3>School Community</h3>
+          <p>
+            Creating a positive environment for students and families.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       LEADERSHIP
+  ========================== -->
+
+  <section class="section leadership" id="leadership">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Our Leadership</h2>
+        <p>
+          Meet the school leadership.
+        </p>
+      </div>
+
+      <div class="leadership-grid">
+
+        <!-- Sir Malik -->
+
+        <div class="leader-card">
+
+          <img
+            src="images/sir-malik.jpg"
+            alt="Sir Malik - Principal"
+            class="leader-photo">
+
+          <div class="leader-info">
+            <h3>Sir Malik</h3>
+            <p>Principal</p>
+          </div>
+
+        </div>
+
+
+        <!-- Sir Jan Akber -->
+
+        <div class="leader-card">
+
+          <img
+            src="images/sir-janakber.jpg"
+            alt="Sir Jan Akber - Principal"
+            class="leader-photo">
+
+          <div class="leader-info">
+            <h3>Sir Jan Akber</h3>
+            <p>Principal</p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       PRINCIPAL MESSAGE / PIV
+  ========================== -->
+
+  <section class="section message">
+
+    <div class="container">
+
+      <div class="message-box">
+
+        <div class="message-text">
+
+          <h2>Principal's Message</h2>
+
+          <p>
+            Welcome to Star Private High School, Landikotal.
+          </p>
+
+          <p>
+            We are committed to creating a positive learning
+            environment and supporting our students as they grow
+            academically and personally.
+          </p>
+
+          <a href="#contact" class="btn btn-primary">
+            Contact Our School
+          </a>
+
+        </div>
+
+        <div class="message-video">
+
+          <!--
+            OPTIONAL PIV VIDEO
+
+            When you have your principal video,
+            put it inside the images folder and name it:
+
+            images/piv.mp4
+
+            Then replace this placeholder with:
+
+            <video controls poster="images/piv-poster.jpg">
+              <source src="images/piv.mp4" type="video/mp4">
+            </video>
+          -->
+
+          <div class="video-placeholder">
+            <div class="play">▶</div>
+            <h3>Principal Introduction Video</h3>
+            <p>
+              PIV video can be added here later.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       GALLERY
+  ========================== -->
+
+  <section class="section gallery" id="gallery">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>School Gallery</h2>
+        <p>
+          Real moments and activities from Star Private High School.
+        </p>
+      </div>
+
+      <div class="gallery-grid">
+
+        <div class="gallery-item">
+          <img src="images/gallery1.jpg" alt="School Photo 1">
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/gallery2.jpg" alt="School Photo 2">
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/gallery3.jpg" alt="School Photo 3">
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/gallery4.jpg" alt="School Photo 4">
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/gallery5.jpg" alt="School Photo 5">
+        </div>
+
+        <div class="gallery-item">
+          <img src="images/gallery6.jpg" alt="School Photo 6">
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       NEWS
+  ========================== -->
+
+  <section class="section news" id="news">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>News & Events</h2>
+        <p>
+          Latest school updates and activities.
+        </p>
+      </div>
+
+      <div class="news-grid">
+
+        <article class="news-card">
+
+          <img src="images/school-event.jpg" alt="School Event">
+
+          <div class="news-content">
+
+            <div class="news-date">
+              SCHOOL EVENT
+            </div>
+
+            <h3>School Activities</h3>
+
+            <p>
+              Add your latest school event or activity information here.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <img src="images/gallery1.jpg" alt="School Activity">
+
+          <div class="news-content">
+
+            <div class="news-date">
+              SCHOOL UPDATE
+            </div>
+
+            <h3>Learning & Development</h3>
+
+            <p>
+              Add an official school update here.
+            </p>
+
+          </div>
+
+        </article>
+
+
+        <article class="news-card">
+
+          <img src="images/gallery2.jpg" alt="School Photo">
+
+          <div class="news-content">
+
+            <div class="news-date">
+              ANNOUNCEMENT
+            </div>
+
+            <h3>School News</h3>
+
+            <p>
+              Add your official announcement or news here.
+            </p>
+
+          </div>
+
+        </article>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       ADMISSION
+  ========================== -->
+
+  <section class="section admission" id="admission">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Admissions</h2>
+        <p>
+          Interested in joining Star Private High School?
+          Send an admission enquiry.
+        </p>
+      </div>
+
+      <div class="admission-box">
+
+        <form
+  id="admissionForm"
+  name="admission"
+  method="POST"
+  data-netlify="true"
+>
+  <input type="hidden" name="form-name" value="admission">
+
+          <div class="form-grid">
+
+            <div class="form-group">
+              <label>Student Name</label>
+              <input
+                type="text"
+                name="student_name"
+                placeholder="Enter student name"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label>Parent / Guardian Name</label>
+              <input
+                type="text"
+                name="parent_name"
+                placeholder="Enter parent name"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label>Class</label>
+
+              <select required>
+                <option value="">Select Class</option>
+                <option>Nursery</option>
+                <option>KG</option>
+                <option>Grade 1</option>
+                <option>Grade 2</option>
+                <option>Grade 3</option>
+                <option>Grade 4</option>
+                <option>Grade 5</option>
+                <option>Grade 6</option>
+                <option>Grade 7</option>
+                <option>Grade 8</option>
+                <option>Grade 9</option>
+                <option>Grade 10</option>
+              </select>
+
+            </div>
+
+            <div class="form-group">
+              <label>Phone Number</label>
+
+              <input
+                type="tel"
+                placeholder="Enter phone number"
+                required>
+
+            </div>
+
+            <div class="form-group full">
+
+              <label>Email</label>
+
+              <input
+                type="email"
+                placeholder="Enter email address">
+
+            </div>
+
+            <div class="form-group full">
+
+              <label>Message</label>
+
+              <textarea
+                placeholder="Write your message or enquiry..."></textarea>
+
+            </div>
+
+          </div>
+
+          <div class="form-submit">
+
+            <button
+              type="submit"
+              class="btn btn-primary">
+              Submit Admission Enquiry
+            </button>
+
+          </div>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       CONTACT
+  ========================== -->
+
+  <section class="section contact" id="contact">
+
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Contact Us</h2>
+        <p>
+          Get in touch with Star Private High School, Landikotal.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="contact-card">
+
+          <h3>School Information</h3>
+
+          <div class="contact-item">
+            <strong>📍 Location</strong>
+            Landikotal, Khyber, Pakistan
+          </div>
+
+          <div class="contact-item">
+            <strong>📞 Phone</strong>
+            +92 301 5593593
+          </div>
+
+          <div class="contact-item">
+            <strong>✉️ Email</strong>
+            afnanabu02@gmail.com
+          </div>
+
+          <div class="contact-buttons">
+
+            <a
+              href="tel:+923015593593"
+              class="btn btn-primary">
+              📞 Call School
+            </a>
+
+            <a
+              href="mailto:afnanabu02@gmail.com"
+              class="btn btn-light">
+              ✉️ Send Email
+            </a>
+
+            <a
+              href="https://www.facebook.com/p/Star-private-high-school-landikotal-100076145951409/"
+              target="_blank"
+              class="btn facebook-btn">
+              📘 Facebook
+            </a>
+
+          </div>
+
+        </div>
+
+
+        <div class="map-box">
+
+          <div>
+
+            <div style="font-size:55px;">📍</div>
+
+            <h3>Landikotal, Khyber</h3>
+
+            <p>
+              Star Private High School
+            </p>
+
+            <br>
+
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Landikotal%2C%20Khyber%2C%20Pakistan"
+              target="_blank"
+              class="btn btn-primary">
+              Open Google Maps
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <div>
+
+          <div class="footer-brand">
+
+            <img
+              src="images/logo.jpg"
+              alt="School Logo">
+
+            <div>
+              <h3>STAR PRIVATE HIGH SCHOOL</h3>
+              <p>LANDIKOTAL</p>
+            </div>
+
+          </div>
+
+          <p>
+            Building Bright Minds, Inspiring Future Leaders.
+          </p>
+
+        </div>
+
+
+        <div>
+
+          <h3>Quick Links</h3>
+
+          <ul class="footer-links">
+
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#news">News</a></li>
+            <li><a href="#admission">Admissions</a></li>
+            <li><a href="#contact">Contact</a></li>
+
+          </ul>
+
+        </div>
+
+
+        <div>
+
+          <h3>Contact</h3>
+
+          <p>Landikotal, Khyber, Pakistan</p>
+
+          <p>+92 301 5593593</p>
+
+          <p>afnanabu02@gmail.com</p>
+
+          <br>
+
+          <a
+            href="https://www.facebook.com/p/Star-private-high-school-landikotal-100076145951409/"
+            target="_blank"
+            class="facebook-btn">
+            📘 Facebook Page
+          </a>
+
+        </div>
+
+      </div>
+
+
+      <div class="copyright">
+
+        © 2026 Star Private High School, Landikotal.
+        All Rights Reserved.
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <!-- BACK TO TOP -->
+
+  <button class="top-btn" id="topBtn">↑</button>
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script>
+
+    /* Mobile Menu */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", function() {
+      navLinks.classList.toggle("active");
+    });
+
+
+    /* Close mobile menu after clicking */
+
+    document.querySelectorAll(".nav-links a").forEach(function(link) {
+
+      link.addEventListener("click", function() {
+        navLinks.classList.remove("active");
+      });
+
+    });
+
+
+    /* Back To Top */
+
+    const topBtn = document.getElementById("topBtn");
+
+    window.addEventListener("scroll", function() {
+
+      if (window.scrollY > 500) {
+        topBtn.classList.add("show");
+      } else {
+        topBtn.classList.remove("show");
+      }
+
+    });
+
+    topBtn.addEventListener("click", function() {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+
+    /* Admission Form */
+
+    const admissionForm =
+      document.getElementById("admissionForm");
+
+    admissionForm.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+      alert(
+        "Thank you! Your admission enquiry has been received."
+      );
+
+      admissionForm.reset();
+
+    });
+
+
+    /* Simple reveal animation */
+
+    const revealElements =
+      document.querySelectorAll(
+        ".feature-card, .leader-card, .news-card, .gallery-item"
+      );
+
+    const observer = new IntersectionObserver(
+      function(entries) {
+
+        entries.forEach(function(entry) {
+
+          if (entry.isIntersecting) {V 
+
+            entry.target.style.opacity = "1";
+            entry.target.style.transform = "translateY(0)";
+
+          }
+
+        });
+
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+
+    revealElements.forEach(function(element) {
+
+      element.style.opacity = "0";
+      element.style.transform = "translateY(25px)";
+      element.style.transition = "0.7s ease";
+
+      observer.observe(element);
+
+    });
+
+  </script>
+
+</body>
+</html>
